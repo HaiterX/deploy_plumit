@@ -1,0 +1,871 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Favicon -->
+        <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+        <link rel="stylesheet" href="{% static 'css/load.css' %}">
+        <link rel="stylesheet" href="{% static 'css/loaded.css' %}">
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="{% static 'css/swiper.css' %}">
+        <link rel="stylesheet" href="{% static 'css/checkbox.css' %}">
+        <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+        <link rel="stylesheet" href="{% static 'css/modal.css' %}">
+        <title>PlumIT - TripHouse</title>
+    </head>
+<body>
+
+
+    <main>
+        <div class="main-window page-case">
+            <div class="block-img-main">
+                <img src="{% static 'img/triphouse/главная.webp' %}" alt="Фоновый рисунок">
+            </div>
+           
+            <div class="container" style="z-index: 9;">
+                <div class="header desk-header">
+                    <a href="index.html" class="header-logo">
+                        <svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_d_948_106)">
+                            <path d="M19.9985 49.8552V40.6367H21.6184V48.3803H26.4647V49.8552H19.9985Z" fill="white"/>
+                            <path d="M32.9915 50.0001C31.7711 50.0001 30.8098 49.6533 30.1074 48.9597C29.4138 48.2661 29.067 47.2609 29.067 45.9439V40.6367H30.6868V45.8781C30.6868 46.7209 30.8932 47.3706 31.3058 47.8271C31.7184 48.2837 32.2891 48.5119 33.0178 48.5119C33.7465 48.5119 34.3128 48.2925 34.7166 47.8535C35.1293 47.4145 35.3356 46.778 35.3356 45.9439V40.6367H36.9554V45.8649C36.9554 47.2082 36.6042 48.2354 35.9019 48.9465C35.1995 49.6489 34.2294 50.0001 32.9915 50.0001Z" fill="white"/>
+                            <path d="M40.4958 49.8552V40.6367H42.221L45.026 44.9958L47.8311 40.6367H49.5563V49.8552H47.9364V43.2442L45.026 47.5901H44.9734L42.0893 43.2706V49.8552H40.4958Z" fill="white"/>
+                            </g>
+                            <g opacity="0.3" filter="url(#filter1_d_948_106)">
+                            <path d="M36.2145 35.7449V25.2095H38.0657V35.7449H36.2145Z" fill="white"/>
+                            <path d="M44.9797 35.7449V26.9252H41.6385V25.2095H50.1872V26.9252H46.846V35.7449H44.9797Z" fill="white"/>
+                            </g>
+                            <path d="M25.5302 23.8952C25.5302 17.6121 19.8138 12.5225 12.7624 12.5225C5.71091 12.5225 0 17.6176 0 23.8952C0 23.9388 0 23.977 0 24.0151V46.9179C0 48.5418 1.31329 49.8551 2.9372 49.8551C4.5611 49.8551 5.87439 48.5418 5.87439 46.9179C5.87439 46.9125 5.87439 46.9016 5.87439 46.8961V24.0151C5.87439 23.9715 5.87439 23.9279 5.87439 23.8898C5.87439 19.8736 9.1331 16.6149 13.1493 16.6149C17.1654 16.6149 20.4241 19.8682 20.4241 23.8898C20.4241 27.8896 17.1927 31.1374 13.1983 31.1647C12.0648 31.1647 11.1439 32.0856 11.1439 33.2191C11.1439 34.3525 12.0648 35.2735 13.1983 35.2735C13.2909 35.2735 13.3836 35.268 13.4708 35.2571C20.1898 34.9247 25.5302 29.9604 25.5302 23.8952Z" fill="white"/>
+                            <path d="M21.5521 0C21.2797 4.87171 17.5414 8.81703 12.7623 9.41101C13.0348 4.5393 16.773 0.593978 21.5521 0Z" fill="white"/>
+                            <defs>
+                            <filter id="filter0_d_948_106" x="9.99854" y="30.6367" width="49.5577" height="29.3633" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset/>
+                            <feGaussianBlur stdDeviation="5"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_948_106"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_948_106" result="shape"/>
+                            </filter>
+                            <filter id="filter1_d_948_106" x="26.2145" y="15.2095" width="33.9727" height="30.5356" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset/>
+                            <feGaussianBlur stdDeviation="5"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_948_106"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_948_106" result="shape"/>
+                            </filter>
+                            </defs>
+                            </svg>
+                                                
+                        </a>
+                    <div class="header-nav GoR">
+                        <a href="index.html">
+                            <span>Главная</span>
+                        </a>
+                        <a href="our-works.html">
+                            <span>Кейсы</span>
+                        </a>
+                        <a href="services.html">
+                            <span>Услуги</span>
+                        </a>
+                        <a href="#footer">
+                            <span>Контакты</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="header mobile-header">
+                    <div class="header-burger-logo">
+                        <a href="index.html" class="header-mobile-logo">
+                            <svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_d_948_106)">
+                                <path d="M19.9985 49.8552V40.6367H21.6184V48.3803H26.4647V49.8552H19.9985Z" fill="white"/>
+                                <path d="M32.9915 50.0001C31.7711 50.0001 30.8098 49.6533 30.1074 48.9597C29.4138 48.2661 29.067 47.2609 29.067 45.9439V40.6367H30.6868V45.8781C30.6868 46.7209 30.8932 47.3706 31.3058 47.8271C31.7184 48.2837 32.2891 48.5119 33.0178 48.5119C33.7465 48.5119 34.3128 48.2925 34.7166 47.8535C35.1293 47.4145 35.3356 46.778 35.3356 45.9439V40.6367H36.9554V45.8649C36.9554 47.2082 36.6042 48.2354 35.9019 48.9465C35.1995 49.6489 34.2294 50.0001 32.9915 50.0001Z" fill="white"/>
+                                <path d="M40.4958 49.8552V40.6367H42.221L45.026 44.9958L47.8311 40.6367H49.5563V49.8552H47.9364V43.2442L45.026 47.5901H44.9734L42.0893 43.2706V49.8552H40.4958Z" fill="white"/>
+                                </g>
+                                <g opacity="0.3" filter="url(#filter1_d_948_106)">
+                                <path d="M36.2145 35.7449V25.2095H38.0657V35.7449H36.2145Z" fill="white"/>
+                                <path d="M44.9797 35.7449V26.9252H41.6385V25.2095H50.1872V26.9252H46.846V35.7449H44.9797Z" fill="white"/>
+                                </g>
+                                <path d="M25.5302 23.8952C25.5302 17.6121 19.8138 12.5225 12.7624 12.5225C5.71091 12.5225 0 17.6176 0 23.8952C0 23.9388 0 23.977 0 24.0151V46.9179C0 48.5418 1.31329 49.8551 2.9372 49.8551C4.5611 49.8551 5.87439 48.5418 5.87439 46.9179C5.87439 46.9125 5.87439 46.9016 5.87439 46.8961V24.0151C5.87439 23.9715 5.87439 23.9279 5.87439 23.8898C5.87439 19.8736 9.1331 16.6149 13.1493 16.6149C17.1654 16.6149 20.4241 19.8682 20.4241 23.8898C20.4241 27.8896 17.1927 31.1374 13.1983 31.1647C12.0648 31.1647 11.1439 32.0856 11.1439 33.2191C11.1439 34.3525 12.0648 35.2735 13.1983 35.2735C13.2909 35.2735 13.3836 35.268 13.4708 35.2571C20.1898 34.9247 25.5302 29.9604 25.5302 23.8952Z" fill="white"/>
+                                <path d="M21.5521 0C21.2797 4.87171 17.5414 8.81703 12.7623 9.41101C13.0348 4.5393 16.773 0.593978 21.5521 0Z" fill="white"/>
+                                <defs>
+                                <filter id="filter0_d_948_106" x="9.99854" y="30.6367" width="49.5577" height="29.3633" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset/>
+                                <feGaussianBlur stdDeviation="5"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_948_106"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_948_106" result="shape"/>
+                                </filter>
+                                <filter id="filter1_d_948_106" x="26.2145" y="15.2095" width="33.9727" height="30.5356" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset/>
+                                <feGaussianBlur stdDeviation="5"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_948_106"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_948_106" result="shape"/>
+                                </filter>
+                                </defs>
+                                </svg>
+                                                               
+                            </a>
+                        <div class="header-mobile-burger">
+                            <svg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1H26" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M1 11.5H26" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M1 21.5H26" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                </svg>                                
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-window-text">
+                    <div class="main-window-subtitle GoR">
+                        <span>Веб-приложение/Мобильное приложение</span>
+                    </div>
+                    <div class="main-window-title GoM">
+                        <span>TripHouse</span>
+                    </div>
+                    <div class="main-window-subtitle-desc GoL">
+                        <span>Разработка дизайна, мобильного приложения, уникального дизайна для проекта нацеленного обучать пользователей криптовалютам</span>
+                    </div>
+
+                    <div class="main-window-button">
+                        <a href="#contact-form" class="GoM">
+                            <span>Оставить заявку</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="main-mockup sdelki">
+                    <img src="{% static 'img/triphouse/mockup/mainMockup.webp' %}">
+                </div>
+         
+            </div>
+
+            <div class="bck-sphera-main-wind">
+                <div class="block-sphera-main">
+                    <img src="img/spheraMain.webp' %}">
+                </div>
+            </div>
+        </div>
+
+        <div class="page-case descr">
+            <div class="container">
+                <div class="block-descr descr-pd-bottom">
+                    <div class="title-descr GoM">
+                        <span>Задача</span>
+                    </div>
+                    <div class="subtitle-descr GoL">
+                        <span>Перед нашей командой стояла задача разработать дизайн для проекта TripHouse. Разработать клиентскую часть и админ панель для управления сайтом. </span>
+                    </div>
+                </div>
+
+                <div class="block-descr descr-line">
+                    <div class="title-descr GoM">
+                        <span>Исполнение</span>
+                    </div>
+                    <div class="subtitle-descr GoL">
+                        <span>Разработка дизайна осуществлялась с помощью программы Figma. При разработке проекта TripHouse наша команда использовала HTML, CSS, JS, Django и базу данных PostgreSQL.</span> 
+                    </div>
+                </div>
+
+                <div class="block-descr descr-pd-top">
+                    <div class="title-descr GoM">
+                        <span>Достигнутый результат</span>
+                    </div>
+                    <div class="subtitle-descr GoL">
+                        <span>Был разработан сайт для ознакомления с услугами и портфолио студии-дизайна TripHouse.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="info-page-case">
+            <div class="container">
+                <div class="block-desk-vr">
+                    <div class="text-block-desk">
+                        <div class="title-block-desk GoM">
+                            <span> <span class="gradient-text">Desktop</span> версия</span>
+                        </div>
+                        <div class="subtitle-block-desk GoL">
+                            <span>TripHouse  - сайт с портфолио и ценами студии-дизайна.</span>
+                        </div>
+                    </div>
+                    <div class="img-block-desk">
+                       <img src="{% static 'img/triphouse/mockup/imac.webp' %}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="task page-case">
+                    <div class="title-task GoM">
+                       
+                    </div>
+                    <div class="subtitle-task GoL">
+                  
+                    </div>
+                    <div class="img-task">
+                        <img src="{% static 'img/triphouse/web/EventWeb.webp' %}">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="task page-case">
+                    <div class="title-task GoM">
+                       
+                    </div>
+                    <div class="subtitle-task GoL">
+                  
+                    </div>
+                    <div class="img-task">
+                        <img src="{% static 'img/triphouse/web/EventPage.webp' %}">
+                    </div>
+                </div>
+            </div>
+            <div class="bck-fst-sdelki">
+                <img src="{% static 'img/sdelki/bckPGCS.webp' %}">
+            </div>
+            <div class="container">
+                <div class="task page-case">
+                    <div class="title-task GoM">
+                     
+                    </div>
+                    <div class="subtitle-task GoL">
+                      
+                    </div>
+                    <div class="img-task">
+                        <img src="{% static 'img/triphouse/web/mapWebEvent.webp' %}">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="task page-case">
+                    <div class="title-task GoM">
+                     
+                    </div>
+                    <div class="subtitle-task GoL">
+                      
+                    </div>
+                    <div class="img-task">
+                        <img src="{% static 'img/triphouse/web/ProfileChat.webp' %}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="task page-case">
+                    <div class="title-task GoM">
+                     
+                    </div>
+                    <div class="subtitle-task GoL">
+                      
+                    </div>
+                    <div class="img-task">
+                        <img src="{% static 'img/triphouse/web/userWathFirm.webp' %}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="task page-case">
+                    <div class="title-task GoM">
+                     
+                    </div>
+                    <div class="subtitle-task GoL">
+                      
+                    </div>
+                    <div class="img-task">
+                        <img src="{% static 'img/triphouse/web/paidTicketCart.webp' %}">
+                    </div>
+                </div>
+            </div>
+           
+            <div class="bck-le-sdelki">
+                <img src="{% static 'img/sdelki/bckCS.webp' %}">
+            </div>
+            <div class="container">
+                <div class="block-desk-vr mobile-adapt">
+                    <div class="text-block-desk">
+                        <div class="title-block-desk GoM">
+                            <span> <span class="gradient-text">Мобильная</span> версия</span>
+                        </div>
+                        <div class="subtitle-block-desk GoL">
+                            <span>Так же была сделана адаптация сайта под все доступные разрешения экранов, как мобильных устройств, так и настольных компьютеров, и ноутбуков.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="img-block-desk imb-mobile-desk">
+                       <img src="{% static 'img/triphouse/mockup/iphone1.webp' %}">
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .img-mobile-phone{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    gap: 30px 0px;
+                }
+
+                .block-mobile-phone-img{
+                    width: 24%;
+                }
+                .block-mobile-phone-img img{
+                    width: 100%;
+                }
+                @media(max-width: 576px){
+                    .block-mobile-phone-img{
+                        width: 48%;
+                    }
+                    .img-tast.img-mobile-phone-phone img{
+                        border-radius: 16px;
+                    }
+                }
+            </style>
+            <div class="container">
+                <div class="task page-case">
+                    <div class="title-task GoM">
+                     
+                    </div>
+                    <div class="subtitle-task GoL">
+                      
+                    </div>
+                    <div class="img-task img-mobile-phone">
+                        <div class="block-mobile-phone-img">
+                            <img src="{% static 'img/triphouse/mobile/startPage.webp' %}">
+                        </div>
+                        <div class="block-mobile-phone-img">
+                            <img src="{% static 'img/triphouse/mobile/auth.webp' %}">
+                        </div>
+                        <div class="block-mobile-phone-img">
+                            <img src="{% static 'img/triphouse/mobile/mainPage.webp' %}">
+                        </div>
+                        <div class="block-mobile-phone-img">
+                            <img src="{% static 'img/triphouse/mobile/datingMain.webp' %}">
+                        </div>
+                        <div class="block-mobile-phone-img">
+                            <img src="{% static 'img/triphouse/mobile/liked.webp' %}">
+                        </div>
+                        <div class="block-mobile-phone-img">
+                            <img src="{% static 'img/triphouse/mobile/CreatedChat.webp' %}">
+                        </div>
+                        <div class="block-mobile-phone-img">
+                            <img src="{% static 'img/triphouse/mobile/chat1.webp' %}">
+                        </div>
+                        <div class="block-mobile-phone-img">
+                            <img src="{% static 'img/triphouse/mobile/invitechat.webp' %}">
+                        </div>
+                        <div class="block-mobile-phone-img">
+                            <img src="{% static 'img/triphouse/mobile/event.webp' %}">
+                        </div>
+                        <div class="block-mobile-phone-img">
+                            <img src="{% static 'img/triphouse/mobile/eventOnTheCart.webp' %}">
+                        </div>
+                        <div class="block-mobile-phone-img">
+                            <img src="{% static 'img/triphouse/mobile/uslFirm.webp' %}">
+                        </div>
+                        <div class="block-mobile-phone-img">
+                            <img src="{% static 'img/triphouse/mobile/paid.webp' %}">
+                        </div>
+                        <div class="block-mobile-phone-img">
+                            <img src="{% static 'img/triphouse/mobile/cartTicket.webp' %}">
+                        </div>
+                        <div class="block-mobile-phone-img">
+                            <img src="{% static 'img/triphouse/mobile/paid.webp' %}">
+                        </div>
+                        <div class="block-mobile-phone-img">
+                            <img src="{% static 'img/triphouse/mobile/ProfileCompany.webp' %}">
+                        </div>
+                        <div class="block-mobile-phone-img">
+                            <img src="{% static 'img/triphouse/mobile/qr-code.webp' %}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="container">
+                <div class="block-desk-vr mobile-adapt mobile-more-st">
+                    <div class="img-block-desk imb-mobile-desk img-double-desk">
+                        <img src="{% static 'img/cryptolife2/mob3.webp' %}">
+                     </div>
+                     <div class="img-block-desk imb-mobile-desk mobile-more-img img-double-desk">
+                        <img src="{% static 'img/moloko/mobile2.webp' %}">
+                     </div>
+                    <div class="text-block-desk">
+                        <div class="title-block-desk GoM">
+                            <span> <span class="gradient-text"></span></span>
+                        </div>
+                        <div class="subtitle-block-desk GoL">
+                            <span>Авторизацию можно пройти в приложение с помощью логина и пароля, предварительно зарегистрировавшись в системе, либо можно авторизироваться при помощи системы Metamask.
+                            </span>
+                            <span>Перед запуском приложения было уделено очень много времени тестированию и оптимизации, что позволило запускать приложение на различных устройств без ошибок. </span>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            
+            <!-- <div class="container">
+                <div class="techologies page-case">
+                    <div class="tech-title GoM">
+                        <span>Инструменты и технологии</span>
+                    </div>
+                    <div class="tech-img">
+                        <img src="{% static 'img/tech/flutter.webp' %}">
+
+                        <img src="{% static 'img/tech/react.webp' %}">
+
+                        <img src="{% static 'img/tech/node.webp' %}">
+
+                        <img src="{% static 'img/tech/postgr.webp' %}">
+                        
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="header-mobile-block">
+            <div class="header-x-mobile">
+                <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.66113 1L21.3388 18.6777" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M3.66113 18.6777L21.3388 1.00006" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>                    
+            </div>
+            <div class="header-nav GoR">
+                <a href="index.html">
+                    <span>Главная</span>
+                </a>
+                <a href="our-works.html">
+                    <span>Кейсы</span>
+                </a>
+                <a href="services.html">
+                    <span>Услуги</span>
+                </a>
+                <a href="#footer">
+                    <span>Контакты</span>
+                </a>
+            </div>
+            <div class="header-mobile-contact">
+                <a href="#">
+                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.06187 9.886L6.76412 14.074C7.19012 14.074 7.37462 13.891 7.59587 13.6712L9.59311 11.7625L13.7316 14.7932C14.4906 15.2162 15.0253 14.9935 15.2301 14.095L17.9466 1.36605L17.9473 1.3653C18.1881 0.243303 17.5416 -0.195445 16.8021 0.0798037L0.834653 6.19302C-0.255092 6.61602 -0.238592 7.22352 0.649404 7.49877L4.73163 8.76851L14.2138 2.83529C14.6601 2.53979 15.0658 2.70329 14.7321 2.99879L7.06187 9.886Z" fill="white"/>
+                    </svg>                        
+                </a>
+                <a href="#">
+                    <svg width="28" height="15" viewBox="0 0 28 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.8103 9.53768C24.6895 10.3961 25.6175 11.2038 26.4061 12.1487C26.7544 12.5687 27.0843 13.002 27.3365 13.4894C27.694 14.1822 27.3702 14.9445 26.7491 14.9859L22.8876 14.9842C21.8916 15.0668 21.0971 14.6658 20.4291 13.9849C19.8945 13.4403 19.3994 12.8608 18.8853 12.2978C18.6745 12.0678 18.4539 11.8513 18.1904 11.6801C17.6633 11.338 17.2057 11.4427 16.9045 11.9925C16.5977 12.5517 16.5281 13.1709 16.4979 13.7941C16.4566 14.7034 16.1817 14.9424 15.2684 14.9841C13.3164 15.0761 11.4638 14.7808 9.74289 13.7961C8.22565 12.928 7.04909 11.7025 6.02503 10.3151C4.03115 7.61357 2.50424 4.645 1.13191 1.59327C0.823011 0.905713 1.04892 0.536635 1.80754 0.523572C3.06726 0.4991 4.32681 0.500842 5.58802 0.521831C6.10001 0.52932 6.43896 0.82298 6.63664 1.30667C7.31819 2.9825 8.15215 4.5769 9.19894 6.05478C9.47771 6.44824 9.76196 6.84171 10.1667 7.11864C10.6146 7.42528 10.9555 7.32365 11.1662 6.82481C11.2998 6.50851 11.3584 6.16782 11.3885 5.82905C11.4883 4.66355 11.5015 3.50006 11.3264 2.33866C11.2189 1.61382 10.8107 1.1446 10.0874 1.00743C9.71833 0.9375 9.77329 0.800163 9.95199 0.589498C10.2624 0.226167 10.5543 0 11.1362 0H15.5003C16.1873 0.135596 16.3399 0.444235 16.4339 1.13554L16.4377 5.98311C16.4302 6.25073 16.5714 7.04488 17.0534 7.22202C17.4392 7.34812 17.6935 7.03948 17.925 6.79485C18.9698 5.68588 19.7156 4.37529 20.3818 3.0182C20.6775 2.42148 20.9317 1.80176 21.178 1.18257C21.3606 0.72309 21.647 0.49701 22.1646 0.507025L26.3647 0.51077C26.4893 0.51077 26.6153 0.512599 26.7359 0.533239C27.4437 0.653855 27.6376 0.958314 27.419 1.64944C27.0746 2.73377 26.4044 3.6374 25.7492 4.5452C25.0487 5.5144 24.2996 6.45042 23.605 7.42537C22.9668 8.31567 23.0175 8.76443 23.8103 9.53768Z" fill="white"/>
+                    </svg>                        
+                </a>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <div class="bck-contact" style="pointer-events: none;">
+                <img src="{% static 'img/formBck.webp' %}">
+            </div>
+            <div class="container">
+                <div class="contact-block-text">
+                    <div class="contact-block-title GoB">
+                        <span>Обсудим <span style="color: #8A9EF6;">ваш</span>  проект?</span>
+                    </div>
+                    <div class="contact-block-subtitle GoL">
+                        <span>Расскажите о целях, задачах, сроках и бюджете вашего проекта как можно подробнее. Это поможет нам лучше вникнуть и сделать вам предложение намного быстрее.</span>
+                    </div>
+                </div>
+                <form  class="form-main-contact" id="contact-form" method="POST" autocomplete="off" enctype="multipart/form-data">
+                    <div class="contact-company">
+                        <div class="contact-company-title GoB">
+                            <span>Ваши контакты</span>
+                            <svg width="32" height="2" viewBox="0 0 32 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1H31" stroke="url(#paint0_linear_420_89)" stroke-linecap="round"/>
+                                <defs>
+                                <linearGradient id="paint0_linear_420_89" x1="1" y1="2" x2="27.6472" y2="-7.96538" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#D07BF1"/>
+                                <stop offset="1" stop-color="#8A9EF6"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>                                
+                        </div>
+
+                        <div class="block-all-input">
+                            <div class="block-input">
+                                <div class="block-input-title GoM">
+                                    <span>Имя</span>
+                                    <span style="color: red;">*</span>
+                                </div>
+                                <input class="GoL" type="text" name="name" id="name" placeholder="Введите Ваше имя">
+                            </div>
+
+
+                            <div class="block-input">
+                                <div class="block-input-title GoM">
+                                    <span>Фамилия</span>
+                                    <span style="color: red;">*</span>
+                                </div>
+                                <input class="GoL" type="text" name="surname" id="surname" placeholder="Введите Вашу фамилию">
+                            </div>
+
+
+                            <div class="block-input">
+                                <div class="block-input-title GoM">
+                                    <span>Компания</span>
+                                    <span style="color: red;"></span>
+                                </div>
+                                <input class="GoL" type="text" name="company" id="company" placeholder="Введите название компании">
+                            </div>
+
+                            <div class="block-input">
+                                <div class="block-input-title GoM">
+                                    <span>Телефон</span>
+                                    <span style="color: red;">*</span>
+                                </div>
+                                <input class="GoL mask-phone" type="tel"  name="phone" id="phone" placeholder="Введите номер телефона">
+                            </div>
+
+                            <div class="block-input">
+                                <div class="block-input-title GoM">
+                                    <span>Электронная почта</span>
+                                    <span style="color: red;"></span>
+                                </div>
+                                <input class="GoL" type="email" name="email" id="email" placeholder="Введите адрес электронной почты">
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-company-title GoB">
+                            <span>О проекте</span>
+                            <svg width="32" height="2" viewBox="0 0 32 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1H31" stroke="url(#paint0_linear_420_89)" stroke-linecap="round"/>
+                                <defs>
+                                <linearGradient id="paint0_linear_420_89" x1="1" y1="2" x2="27.6472" y2="-7.96538" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#D07BF1"/>
+                                <stop offset="1" stop-color="#8A9EF6"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>                                
+                        </div>
+
+                        <div class="block-all-input">
+                            <div class="block-input check-box-input">
+                                <div class="block-input-title GoM">
+                                    <span>Выберите услугу</span>
+                                    <span style="color: red;">*</span>
+                                </div>
+                                
+                                <div class="block-with-checkbox">
+                                    <label class="checkbox-btn GoM">
+                                        <input name="site" type="checkbox" value="Разработка сайта" checked>
+                                        <span>Сайт</span>
+                                    </label>
+
+                                    <label class="checkbox-btn GoM">
+                                        <input name="web-app" type="checkbox" value="Разработка веб-сервиса">
+                                        <span>Веб-сервис</span>
+                                    </label>
+
+                                    <label class="checkbox-btn GoM">
+                                        <input name="mobile-app" type="checkbox" value="Разработка мобильного приложения">
+                                        <span>Мобильное приложение</span>
+                                    </label>
+
+
+                                    <label  class="checkbox-btn GoM" >
+                                        <input name="design" type="checkbox" value="Разработка дизайна">
+                                        <span>Дизайн</span>
+                                    </label>
+
+                                    <label  class="checkbox-btn GoM" >
+                                        <input name="testing" type="checkbox" value="Тестирование сервиса" >
+                                        <span>Тестирование</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="block-input desc-project">
+                                <div class="block-input-title GoM">
+                                    <span>Описание проекта</span>
+                                    
+                                </div>
+                                
+                                <div class="block-with-textarea">
+                                    <textarea class="GoL" name="desk_project" id=""   placeholder="Расскажите о Вашем проекте"></textarea>
+                                </div>
+                            </div>
+
+
+                            <div class="block-input check-box-input">
+                                <div class="block-input-title GoM">
+                                    <span>Бюджет</span>
+                                    <span style="color: red;">*</span>
+                                </div>
+                                
+                                <div class="block-with-checkbox">
+                                    <label class="checkbox-btn money-check GoM">
+                                        <input type="checkbox" checked name="doSto" value="Бюджет: до 100тыс">
+                                        <span>До 100 тыс</span>
+                                    </label>
+
+                                    <label class="checkbox-btn money-check GoM">
+                                        <input type="checkbox" name="stoPtos" value="Бюджет: 100-500тыс">
+                                        <span>100-500 тыс</span>
+                                    </label>
+
+                                    <label class="checkbox-btn money-check GoM">
+                                        <input type="checkbox" name="ptosMil" value="Бюджет: 500тыс - 1млн">
+                                        <span>500 тыс - 1 млн</span>
+                                    </label>
+
+
+                                    <label class="checkbox-btn money-check GoM" >
+                                        <input type="checkbox" name="odinDvaMil" value="Бюджет: 1-2млн">
+                                        <span>1-2 млн</span>
+                                    </label>
+
+                                    <label class="checkbox-btn money-check GoM" >
+                                        <input type="checkbox" name="mnogoDeneg" value="Бюджет: более 2млн">
+                                        <span>2+ млн</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-btn">
+                                <button type="submit" class="GoM form-btn-ddsub"> 
+                                    <span>Оставить заявку</span>
+                                </button>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-window-services modal-form success-form">
+            <div class="modal-header">
+                <div class="modal-title GoM">
+                    <span>Заявка успешно отправлена</span>
+                </div>
+            </div>
+            <div class="modal-desk-title GoL">
+                <span>В ближайшее время с Вами свяжется наш менеджер.</span>
+            </div>
+            <div class="us-price-block-btn modal-close okay-btn GoR">
+                <a><span>Принять</span></a>
+            </div>
+        </div>
+        <div class="modal-window-services modal-form failed-form">
+            <div class="modal-header">
+                <div class="modal-title GoM">
+                    <span>Заявка не отправлена</span>
+                </div>
+            </div>
+            <div class="modal-desk-title GoL">
+                <span>Заполните пожалуйста все обязательные поля отмеченные <span style="color: red; font-size: 32px;">*</span></span>
+            </div>
+            <div class="us-price-block-btn modal-close okay-btn GoR">
+                <a><span>Принять</span></a>
+            </div>
+        </div>
+        <div class="modal-window-services modal-form error-form">
+            <div class="modal-header">
+                <div class="modal-title GoM">
+                    <span>Заявка не отправлена, попробуйте еще раз.</span>
+                </div>
+            </div>
+            <div class="us-price-block-btn modal-close okay-btn GoR">
+                <a><span>Принять</span></a>
+            </div>
+        </div>
+    </main>
+    <div class="modal-background"></div>
+    <footer id="footer">
+        <div class="container">
+            <div class="st-Block">
+                <div class="footer-logo">
+                    <div class="footer-logo-img">
+                        <svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_d_948_106)">
+                            <path d="M19.9985 49.8552V40.6367H21.6184V48.3803H26.4647V49.8552H19.9985Z" fill="white"/>
+                            <path d="M32.9915 50.0001C31.7711 50.0001 30.8098 49.6533 30.1074 48.9597C29.4138 48.2661 29.067 47.2609 29.067 45.9439V40.6367H30.6868V45.8781C30.6868 46.7209 30.8932 47.3706 31.3058 47.8271C31.7184 48.2837 32.2891 48.5119 33.0178 48.5119C33.7465 48.5119 34.3128 48.2925 34.7166 47.8535C35.1293 47.4145 35.3356 46.778 35.3356 45.9439V40.6367H36.9554V45.8649C36.9554 47.2082 36.6042 48.2354 35.9019 48.9465C35.1995 49.6489 34.2294 50.0001 32.9915 50.0001Z" fill="white"/>
+                            <path d="M40.4958 49.8552V40.6367H42.221L45.026 44.9958L47.8311 40.6367H49.5563V49.8552H47.9364V43.2442L45.026 47.5901H44.9734L42.0893 43.2706V49.8552H40.4958Z" fill="white"/>
+                            </g>
+                            <g opacity="0.3" filter="url(#filter1_d_948_106)">
+                            <path d="M36.2145 35.7449V25.2095H38.0657V35.7449H36.2145Z" fill="white"/>
+                            <path d="M44.9797 35.7449V26.9252H41.6385V25.2095H50.1872V26.9252H46.846V35.7449H44.9797Z" fill="white"/>
+                            </g>
+                            <path d="M25.5302 23.8952C25.5302 17.6121 19.8138 12.5225 12.7624 12.5225C5.71091 12.5225 0 17.6176 0 23.8952C0 23.9388 0 23.977 0 24.0151V46.9179C0 48.5418 1.31329 49.8551 2.9372 49.8551C4.5611 49.8551 5.87439 48.5418 5.87439 46.9179C5.87439 46.9125 5.87439 46.9016 5.87439 46.8961V24.0151C5.87439 23.9715 5.87439 23.9279 5.87439 23.8898C5.87439 19.8736 9.1331 16.6149 13.1493 16.6149C17.1654 16.6149 20.4241 19.8682 20.4241 23.8898C20.4241 27.8896 17.1927 31.1374 13.1983 31.1647C12.0648 31.1647 11.1439 32.0856 11.1439 33.2191C11.1439 34.3525 12.0648 35.2735 13.1983 35.2735C13.2909 35.2735 13.3836 35.268 13.4708 35.2571C20.1898 34.9247 25.5302 29.9604 25.5302 23.8952Z" fill="white"/>
+                            <path d="M21.5521 0C21.2797 4.87171 17.5414 8.81703 12.7623 9.41101C13.0348 4.5393 16.773 0.593978 21.5521 0Z" fill="white"/>
+                            <defs>
+                            <filter id="filter0_d_948_106" x="9.99854" y="30.6367" width="49.5577" height="29.3633" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset/>
+                            <feGaussianBlur stdDeviation="5"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_948_106"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_948_106" result="shape"/>
+                            </filter>
+                            <filter id="filter1_d_948_106" x="26.2145" y="15.2095" width="33.9727" height="30.5356" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset/>
+                            <feGaussianBlur stdDeviation="5"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_948_106"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_948_106" result="shape"/>
+                            </filter>
+                            </defs>
+                            </svg>
+                            
+                    </div>
+                    <!-- <div class="footer-logo-text GoM">
+                        <span>PLUMIT</span>
+                    </div> -->
+                </div>
+
+                <div class="footer-logo-subtitle GoL">
+                    <span>Разработка и создание сайтов, 
+                        веб-сервисов, мобильных приложений, уникального дизайна и фирменного стиля</span>
+                </div>
+            </div>
+
+            <div class="footer-nav">
+                <div class="footer-nav-title GoM">
+                    <span>Навигация</span>
+                </div>
+                <div class="footer-nav-link GoL">
+                    <a href="index.html">
+                        <span>Главная</span>
+                    </a>
+
+                    <a href="our-works.html">
+                        <span>Кейсы</span>
+                    </a>
+
+                    <a href="services.html">
+                        <span>Тарифы</span>
+                    </a>
+
+                    <!-- <a href="">
+                        <span>Контакты</span>
+                    </a> -->
+                </div>
+            </div>
+
+            <div class="footer-contact">
+                <div class="footer-contact-title GoM">
+                    <span>Контакты</span>
+                </div>
+                <div class="footer-contact-number contact-info-footer GoL">
+                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.4443 16.5L13.4457 16.5C13.6942 16.5014 13.9406 16.4536 14.1705 16.3594L14.36 16.8221L14.1706 16.3594C14.4005 16.2652 14.6096 16.1265 14.7858 15.9512L14.7868 15.9502L16.7449 14.0122C16.7783 13.9772 16.8065 13.9376 16.8285 13.8949L16.7179 14.0043L14.7561 15.946L13.4443 16.5ZM13.4443 16.5C13.3107 16.4996 13.1775 16.4849 13.047 16.4563L13.0471 16.4562L13.041 16.455C9.98778 15.8234 7.17488 14.3428 4.92582 12.1835C2.72869 10.0217 1.20462 7.26994 0.537778 4.26065C0.474934 3.95838 0.490695 3.64502 0.583575 3.35056C0.676726 3.05524 0.84431 2.78886 1.0702 2.57705L1.07023 2.57708L1.07494 2.57255L3.0857 0.637194C3.09882 0.62487 3.11257 0.61328 3.12687 0.602465M13.4443 16.5L3.12687 0.602465M3.12687 0.602465L3.08843 0.639463L1.0785 2.57402C0.854333 2.78393 0.68834 3.04835 0.596724 3.34152C0.504673 3.63608 0.490878 3.94953 0.556694 4.25104L0.556806 4.25156C1.21687 7.26022 2.73415 10.0133 4.92529 12.1782L4.92526 12.1782L4.93041 12.1832C7.17896 14.3422 9.99152 15.8222 13.0443 16.453M3.12687 0.602465L13.0443 16.453M13.0443 16.453C13.0441 16.453 13.0439 16.4529 13.0437 16.4529L13.146 15.9635L13.0449 16.4531C13.0447 16.4531 13.0445 16.453 13.0443 16.453ZM13.0443 16.453C13.3492 16.5167 13.6651 16.5037 13.9638 16.4153C14.2624 16.3269 14.5345 16.1658 14.7556 15.9465L13.0443 16.453ZM16.6382 13.2279C16.6547 13.2378 16.6706 13.2486 16.6858 13.2602L16.6375 13.229L12.9695 10.8591L12.8147 10.7591C12.8209 10.7621 12.827 10.7654 12.833 10.7688L16.6231 13.2186L16.6305 13.2234L16.6382 13.2279ZM12.4702 10.7957C12.5002 10.772 12.5339 10.754 12.5699 10.7421L12.3867 10.888L10.7074 12.2254C10.7073 12.2255 10.7073 12.2255 10.7073 12.2255C10.7071 12.2256 10.7069 12.2258 10.7067 12.2258C10.7066 12.2259 10.7065 12.2259 10.7063 12.226C10.6979 12.2229 10.6895 12.2197 10.6811 12.2166L10.906 12.038L12.4699 10.7959C12.47 10.7958 12.4701 10.7958 12.4702 10.7957ZM7.19283 9.94763C6.42821 9.23358 5.79134 8.3975 5.30691 7.47588C5.80228 8.39095 6.43775 9.22468 7.19151 9.94624C7.19236 9.94708 7.1932 9.94792 7.19405 9.94876L7.19283 9.94763ZM10.3625 12.0908C9.18476 11.6013 8.11518 10.8813 7.21734 9.97188C8.12392 10.8688 9.19079 11.5875 10.3625 12.0908Z" stroke="url(#paint0_linear_649_92)"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_649_92" x1="3.2382e-08" y1="17" x2="17.5988" y2="16.7757" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#D07BF1"/>
+                        <stop offset="1" stop-color="#8A9EF6"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>                        
+                    <span>+79532663211</span>
+                </div>
+                <div class="footer-contact-phone contact-info-footer GoL">
+                    <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.9194 1.06329C16.7837 1.02126 16.6396 1 16.487 1H2.46956C2.31695 1 2.17285 1.02126 2.03706 1.06329C1.43269 1.24534 1 1.80093 1 2.46959V12.5305C1 12.9371 1.16013 13.3018 1.42143 13.5663C1.4306 13.5799 1.44064 13.5928 1.45216 13.6044C1.52552 13.6704 1.60467 13.7286 1.68797 13.7789C1.89515 13.9077 2.13764 13.9864 2.39948 13.9983C2.42283 13.9994 2.44617 14 2.46952 14H16.4869C16.5103 14 16.5336 13.9994 16.557 13.9983C17.3433 13.9625 17.9565 13.3265 17.9565 12.5304V2.46959C17.9565 1.80093 17.5238 1.24534 16.9194 1.06329ZM11.1494 7.75082L17.2806 2.02839C17.3513 2.15805 17.3913 2.30807 17.3913 2.46956V12.5304C17.3913 12.7101 17.3418 12.8756 17.2555 13.0146L11.1494 7.75082ZM16.487 1.56523C16.5036 1.56523 16.5198 1.56569 16.5356 1.56649C16.5435 1.56688 16.5513 1.56761 16.5592 1.56821C16.5677 1.56884 16.5763 1.56937 16.5846 1.57026C16.5887 1.57069 16.5927 1.57129 16.5967 1.57175C16.6898 1.58298 16.7722 1.60891 16.8544 1.65004L10.6298 7.47044C10.593 7.48346 10.5572 7.50333 10.5239 7.5283L10.2978 7.72612C9.8174 8.17828 9.08264 8.17828 8.60219 7.72612L8.57162 7.69939L2.10217 1.65001C2.18437 1.60891 2.26674 1.58295 2.3598 1.57172C2.36384 1.57126 2.36782 1.57066 2.37189 1.57023C2.38024 1.56934 2.38885 1.56884 2.39739 1.56818C2.40524 1.56758 2.41302 1.56685 2.42094 1.56645C2.4368 1.56566 2.45296 1.5652 2.46959 1.5652H16.487V1.56523ZM1.682 12.9823C1.60759 12.8502 1.56523 12.6964 1.56523 12.5304V2.46959C1.56523 2.3081 1.60524 2.15808 1.67594 2.02842L7.77996 7.72552L1.682 12.9823ZM2.46956 13.4348C2.37788 13.4348 2.28621 13.4162 2.19451 13.3941C2.1746 13.388 2.1551 13.381 2.13586 13.3736L8.21905 8.13536L8.23481 8.15006C8.35125 8.24859 8.47339 8.33281 8.6003 8.40202C9.26797 8.78471 10.147 8.70085 10.7218 8.15006L10.7511 8.12271L16.8207 13.3736C16.8015 13.381 16.782 13.388 16.7621 13.3941C16.6704 13.4162 16.5787 13.4348 16.487 13.4348H2.46956V13.4348Z" fill="url(#paint0_linear_649_91)" stroke="url(#paint1_linear_649_91)" stroke-width="0.25"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_649_91" x1="1" y1="14" x2="18.1634" y2="13.7209" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#D07BF1"/>
+                        <stop offset="1" stop-color="#8A9EF6"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_649_91" x1="1" y1="14" x2="18.1634" y2="13.7209" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#D07BF1"/>
+                        <stop offset="1" stop-color="#8A9EF6"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>                        
+                    <span>plumit.web@gmail.com</span>
+                </div>
+                <div class="footer-contact-wa-tg">
+                    <a href="#">
+                        <svg style="color: white" xmlns="http://www.w3.org/2000/svg" width="24" height="20" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16"> <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" fill="white"></path> </svg>
+                    </a>
+                    <a href="https://t.me/drclouniz" target="_blank">
+                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.84784 11.4857L7.517 16.1392C7.99034 16.1392 8.19534 15.9359 8.44118 15.6917L10.6604 13.5708L15.2588 16.9384C16.1022 17.4084 16.6964 17.1609 16.9239 16.1625L19.9423 2.01885L19.9431 2.01802C20.2106 0.771321 19.4923 0.283809 18.6706 0.58965L0.928504 7.38231C-0.282359 7.85232 -0.264025 8.52734 0.722666 8.83318L5.25861 10.244L15.7947 3.65139C16.2905 3.32305 16.7414 3.50472 16.3705 3.83306L7.84784 11.4857Z" fill="white"/>
+                        </svg>                            
+                    </a>
+                </div>
+            </div>
+           
+            <div class="footer-quest">
+                <div class="footer-quest-title GoM">
+                    <span>Остались вопросы?</span>
+                </div>
+                <div class="footer-quest-subtitle GoL">
+                    <span>Оставьте адрес своей электронной почты, чтобы наши менеджеры могли связаться с Вами для консультации</span>
+                </div>
+                <div class="footer-quest-form">
+                    <form action="#">
+                        <input class="GoL" type="email" placeholder="Адрес электронной почты">
+                        <button class="GoM">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container under">
+            <div class="info-dev">
+                <div class="all-rights GoR">
+                    <span>All Rights Reserved © 2023 </span>
+                </div>
+
+                <div class="info-dev-company GoR">
+                    <span>Сайт разработан  <span class="gradient-text">PLUMIT</span></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="load-win" id="preloader_malc">
+
+        <div>
+            <div class="loading-container">
+                <div class="loading-text GoM">
+                  <span>P</span>
+                  <span>L</span>
+                  <span>U</span>
+                  <span>M</span>
+                  <span>I</span>
+                  <span>T</span>
+                </div>
+              </div>
+        </div>
+    
+    </div>
+     <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script src="https://snipp.ru/cdn/maskedinput/jquery.maskedinput.min.js"></script>
+     <script src="js/script.js"></script>
+     <script src="telegramform/js/telegramform.js"></script>
+   
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% load static %}
+
+{% for block in works_blocks %}
+<div class="main-all-portfolio">
+    {% for case in block %}
+    <a href="{% url 'case_detail' slug=case.slug %}" class="main-portfolio-us-block {% if case.cover_scale == 100 %}rdBlock{% elif case.cover_scale == 60 %}stBlock{% else %}leBlock{% endif %}">
+        <div class="main-portfolio-img">
+            {% if case.cover_image %}
+            <img class="cover-img" src="{{ case.cover_image.url }}" alt="{{ case.cover_alt|default:case.title }}">
+            {% else %}
+            <img class="cover-img" src="{% static 'img/stBlock.webp' %}" alt="{{ case.title }}">
+            {% endif %}
+        </div>
+
+        <div class="title GoM">
+            <span>{{ case.title }}</span>
+        </div>
+
+        {% if case.subtitle %}
+        <div class="subtitle GoL">
+            <span>{{ case.subtitle }}</span>
+        </div>
+        {% endif %}
+    </a>
+    {% endfor %}
+</div>
+{% endfor %}

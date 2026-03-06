@@ -1,0 +1,25 @@
+.load-win{
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    visibility: visible;
+    opacity: 1;
+    /* transition: all 0.5s; */
+}
+#preloader_malc {
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 1);
+    z-index: 999
+}
+body.loaded .load-win{
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+}
