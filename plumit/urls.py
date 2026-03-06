@@ -33,6 +33,7 @@ urlpatterns = [
     path("moloko/", views.moloko, name="moloko"),
     path("bookingrent/", views.bookingrent, name="bookingrent"),
     path("sdelkipro/", views.sdelkipro, name="sdelkipro"),
+    path("our-works/load-more/", views.works_load_more, name="works_load_more"),
     
     
 ]
