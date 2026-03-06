@@ -53,7 +53,7 @@ class CaseAdmin(admin.ModelAdmin):
         )}),
         ("Картинки страницы", {"fields": (
             "cover_image", "cover_alt", "cover_scale", "cover_preview",
-            "hero_image", "mockup_image", "sphera_bg_image", "contact_bg_image",
+            "hero_image", "mockup_image", "contact_bg_image",
         )}),
         ("Тексты блоков", {"fields": ("task_text", "execution_text", "result_text")}),
         ("Desktop / Mobile", {"fields": (
