@@ -2,7 +2,6 @@ import requests
 import os
 from django.shortcuts import render, redirect
 from dotenv import load_dotenv
-from django.core.paginator import Paginator
 
 from django.shortcuts import render, get_object_or_404
 from .models import Case
@@ -49,9 +48,21 @@ def works(request):
 
     works_blocks = [buckets[k] for k in sorted(buckets.keys())]
 
-    paginator = Paginator(works_blocks, 3)  # 3 блока на страницу
-    page_number = request.GET.get("page")
-    page_obj = paginator.get_page(page_number)
+    limit = 2
+    offset = int(request.GET.get("offset", 0))
+
+    visible_blocks = works_blocks[:offset + limit]
+    has_more = len(visible_blocks) < len(works_blocks)
+
+    return render(
+        request,
+        "our-works.html",
+        {
+            "works_blocks": visible_blocks,
+            "has_more": has_more,
+            "next_offset": offset + limit,
+        },
+    )
 
     return render(
         request,
