@@ -145,7 +145,7 @@
 
                 <div class="main-portfolio case-page-portfolio">
                     <div class="container">
-                        <div class="main-portfolio-us">
+                        <div class="main-portfolio-us" id="works-list">
                             <div class="services-title case-title GoM">
                                 <span>Кейсы</span>
                             </div>
@@ -178,7 +178,7 @@
 
                             {% if has_more %}
                             <div class="main-window-button">
-                                <a href="?offset={{ next_offset }}" class="GoM">
+                                <a href="?offset={{ next_offset }}#works-list" class="GoM">
                                     <span>Показать ещё</span>
                                 </a>
                             </div>
