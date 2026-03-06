@@ -1,12 +1,14 @@
 import requests
 import os
-from django.shortcuts import render, redirect
-from dotenv import load_dotenv
-
-from django.shortcuts import render, get_object_or_404
-from .models import Case
-from django.db.models import Case as DCase, When, Value, IntegerField
 from collections import defaultdict
+
+from django.http import JsonResponse
+from django.shortcuts import render, redirect, get_object_or_404
+from django.template.loader import render_to_string
+from dotenv import load_dotenv
+from django.db.models import Case as DCase, When, Value, IntegerField
+
+from .models import Case
 
 
 home_cases = (
@@ -29,10 +31,12 @@ def index(request):
     )
     return render(request, "index.html", {"home_cases": home_cases})
 
-def services(request):
-    return render(request, 'services.html')
 
-def works(request):
+def services(request):
+    return render(request, "services.html")
+
+
+def _get_works_blocks():
     qs = (
         Case.objects.filter(
             is_published=True,
@@ -43,15 +47,17 @@ def works(request):
     )
 
     buckets = defaultdict(list)
-    for c in qs:
-        buckets[c.works_block].append(c)
+    for case in qs:
+        buckets[case.works_block].append(case)
 
-    works_blocks = [buckets[k] for k in sorted(buckets.keys())]
+    return [buckets[k] for k in sorted(buckets.keys())]
 
-    limit = 2
-    offset = int(request.GET.get("offset", 0))
 
-    visible_blocks = works_blocks[:offset + limit]
+def works(request):
+    works_blocks = _get_works_blocks()
+
+    limit = 1
+    visible_blocks = works_blocks[:limit]
     has_more = len(visible_blocks) < len(works_blocks)
 
     return render(
@@ -60,38 +66,64 @@ def works(request):
         {
             "works_blocks": visible_blocks,
             "has_more": has_more,
-            "next_offset": offset + limit,
+            "next_offset": limit,
         },
     )
 
-    return render(
-        request,
-        "our-works.html",
-        {
-            "works_blocks": page_obj.object_list,
-            "page_obj": page_obj,
-        },
+
+def works_load_more(request):
+    works_blocks = _get_works_blocks()
+
+    limit = 1
+    offset = int(request.GET.get("offset", 0))
+
+    new_blocks = works_blocks[offset:offset + limit]
+    next_offset = offset + limit
+    has_more = next_offset < len(works_blocks)
+
+    html = render_to_string(
+        "includes/works_blocks.html",
+        {"works_blocks": new_blocks},
+        request=request,
     )
+
+    return JsonResponse(
+        {
+            "html": html,
+            "has_more": has_more,
+            "next_offset": next_offset,
+        }
+    )
+
 
 def techimpuls(request):
-    return render(request, 'techimpuls.html')
+    return render(request, "techimpuls.html")
+
 
 def triphouse(request):
-    return render(request, 'triphouse.html')
+    return render(request, "triphouse.html")
+
 
 def moloko(request):
     return render(request, "moloko.html")
 
+
 def bookingrent(request):
     return render(request, "bookingrent.html")
+
 
 def sdelkipro(request):
     return render(request, "sdelkipro.html")
 
 
 def case_detail(request, slug):
-    case = get_object_or_404(Case.objects.prefetch_related("images"), slug=slug, is_published=True)
+    case = get_object_or_404(
+        Case.objects.prefetch_related("images"),
+        slug=slug,
+        is_published=True,
+    )
     return render(request, "case-detail.html", {"case": case})
+
 
 load_dotenv()
 
@@ -101,7 +133,6 @@ CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 def contact_form(request):
     if request.method == "POST":
-
         name = request.POST.get("name")
         surname = request.POST.get("surname")
         phone = request.POST.get("phone")
@@ -124,9 +155,12 @@ Email: {email}
 
         url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
 
-        requests.post(url, data={
-            "chat_id": CHAT_ID,
-            "text": message
-        })
+        requests.post(
+            url,
+            data={
+                "chat_id": CHAT_ID,
+                "text": message,
+            },
+        )
 
-        return redirect('home')
+        return redirect("home")
