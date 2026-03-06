@@ -194,53 +194,54 @@
 
         <div class="info-page-case">
             <div class="container">
-                <div class="block-desk-vr">
-                    <div class="text-block-desk">
-                        <div class="title-block-desk GoM">
-                            <span>
-                                <span class="gradient-text">{{ case.desktop_title_gradient }}</span>
-                                {{ case.desktop_title_text }}
-                            </span>
-                        </div>
-                        {% if case.desktop_text %}
-                        <div class="subtitle-block-desk GoL">
-                            <span>{{ case.desktop_text|linebreaksbr }}</span>
-                        </div>
-                        {% endif %}
-                    </div>
-
-                    {% if case.desktop_image %}
-                    <div class="img-block-desk">
-                        <img src="{{ case.desktop_image.url }}" alt="">
-                    </div>
-                    {% endif %}
-                </div>
-            </div>
-            
-
-            {% for img in case.images.all|slice:":5" %}
-                <div class="container">
-                    <div class="task page-case">
-
-                        {% if img.title %}
-                        <div class="title-task GoM">
-                            <span>{{ img.title }}</span>
-                        </div>
-                        {% endif %}
-
-                        {% if img.subtitle %}
-                        <div class="subtitle-task GoL">
-                            <span>{{ img.subtitle|linebreaksbr }}</span>
-                        </div>
-                        {% endif %}
-
-                        <div class="img-task {% if img.scale != 100 %}img-task--scaled{% endif %}" style="--w: {{ img.scale }}%;">
-                            <img src="{{ img.image.url }}" alt="">
-                        </div>
-
-                    </div>
-                </div>
-            {% endfor %}
+              <div class="block-desk-vr">
+                  {% if case.desktop_text %}
+                  <div class="subtitle GoL">
+                      <span>{{ case.desktop_text|linebreaksbr }}</span>
+                  </div>
+                  {% endif %}
+      
+                  {% if case.desktop_image %}
+                  <div class="macbook-image">
+                      <img src="{{ case.desktop_image.url }}" alt="">
+                  </div>
+                  {% endif %}
+      
+                  {% if case.desktop_title_gradient or case.desktop_title_text %}
+                  <div class="title GoM">
+                      {% if case.desktop_title_gradient %}
+                      <span class="gr">{{ case.desktop_title_gradient }}</span>
+                      {% endif %}
+                      {% if case.desktop_title_text %}
+                      <span>{{ case.desktop_title_text }}</span>
+                      {% endif %}
+                  </div>
+                  {% endif %}
+              </div>
+          </div>
+      </div>
+      
+      {% for img in case.images.all|slice:":5" %}
+      <div class="container">
+          <div class="task page-case">
+              {% if img.title %}
+              <div class="title-task GoM">
+                  <span>{{ img.title }}</span>
+              </div>
+              {% endif %}
+      
+              {% if img.subtitle %}
+              <div class="subtitle-task GoL">
+                  <span>{{ img.subtitle|linebreaksbr }}</span>
+              </div>
+              {% endif %}
+      
+              <div class="img-task {% if img.scale != 100 %}img-task--scaled{% endif %}" style="--w: {{ img.scale }}%;">
+                  <img src="{{ img.image.url }}" alt="">
+              </div>
+          </div>
+      </div>
+      {% endfor %}
 
 
 
