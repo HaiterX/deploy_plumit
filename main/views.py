@@ -2,6 +2,7 @@ import requests
 import os
 from django.shortcuts import render, redirect
 from dotenv import load_dotenv
+from django.core.paginator import Paginator
 
 from django.shortcuts import render, get_object_or_404
 from .models import Case
@@ -34,7 +35,11 @@ def services(request):
 
 def works(request):
     qs = (
-        Case.objects.filter(is_published=True, show_on_works=True, works_position__in=[1, 2, 3])
+        Case.objects.filter(
+            is_published=True,
+            show_on_works=True,
+            works_position__in=[1, 2, 3],
+        )
         .order_by("works_block", "works_position", "created_at")
     )
 
@@ -44,7 +49,18 @@ def works(request):
 
     works_blocks = [buckets[k] for k in sorted(buckets.keys())]
 
-    return render(request, "our-works.html", {"works_blocks": works_blocks})
+    paginator = Paginator(works_blocks, 3)  # 3 блока на страницу
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
+
+    return render(
+        request,
+        "our-works.html",
+        {
+            "works_blocks": page_obj.object_list,
+            "page_obj": page_obj,
+        },
+    )
 
 def techimpuls(request):
     return render(request, 'techimpuls.html')
